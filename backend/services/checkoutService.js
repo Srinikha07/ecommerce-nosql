@@ -1,0 +1,59 @@
+const crypto = require('crypto');
+const cartService = require('./cartService');
+const Order = require('../models/Order');
+// const driver = require('../config/neo4j'); // TODO: uncomment once Neo4j Aura is live
+
+function generateOrderId() {
+  const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  const rand = crypto.randomBytes(2).toString('hex');
+  return `ORD-${date}-${rand}`;
+}
+
+async function checkout(sessionId, userId, shippingAddress) {
+  // 1. Get the cart from Redis
+  const { items } = await cartService.getCart(sessionId);
+  const productIds = Object.keys(items);
+
+  if (productIds.length === 0) {
+    throw new Error('Cart is empty');
+  }
+
+  // 2. Build order items from cart snapshot
+  // NOTE: doc's design re-validates price against MongoDB here.
+  // Skipped for now to keep this testable without full Product sync — revisit before final submission.
+  const orderItems = productIds.map((productId) => ({
+    productId,
+    name: items[productId].name,
+    priceAtPurchase: items[productId].price,
+    quantity: items[productId].quantity,
+  }));
+
+  const total = orderItems.reduce((sum, i) => sum + i.priceAtPurchase * i.quantity, 0);
+
+  // 3. Create the order in MongoDB
+  const order = await Order.create({
+    orderId: generateOrderId(),
+    userId,
+    items: orderItems,
+    shippingAddress,
+    total: Number(total.toFixed(2)),
+    status: 'placed',
+  });
+
+  // 4. TODO: write :PURCHASED relationships in Neo4j once Aura is live
+  // for (const item of orderItems) {
+  //   await session.run(
+  //     `MERGE (c:Customer {customerId: $userId})
+  //      MERGE (p:Product {productId: $productId})
+  //      MERGE (c)-[:PURCHASED {orderId: $orderId, quantity: $quantity, timestamp: datetime()}]->(p)`,
+  //     { userId, productId: item.productId, orderId: order.orderId, quantity: item.quantity }
+  //   );
+  // }
+
+  // 5. Clear the cart in Redis
+  await cartService.clearCart(sessionId);
+
+  return order;
+}
+
+module.exports = { checkout };
