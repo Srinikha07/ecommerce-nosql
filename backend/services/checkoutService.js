@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const cartService = require('./cartService');
 const Order = require('../models/Order');
-// const driver = require('../config/neo4j'); // TODO: uncomment once Neo4j Aura is live
+const driver = require('../config/neo4j');
 
 function generateOrderId() {
   const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
@@ -19,8 +19,6 @@ async function checkout(sessionId, userId, shippingAddress) {
   }
 
   // 2. Build order items from cart snapshot
-  // NOTE: doc's design re-validates price against MongoDB here.
-  // Skipped for now to keep this testable without full Product sync — revisit before final submission.
   const orderItems = productIds.map((productId) => ({
     productId,
     name: items[productId].name,
@@ -40,15 +38,28 @@ async function checkout(sessionId, userId, shippingAddress) {
     status: 'placed',
   });
 
-  // 4. TODO: write :PURCHASED relationships in Neo4j once Aura is live
-  // for (const item of orderItems) {
-  //   await session.run(
-  //     `MERGE (c:Customer {customerId: $userId})
-  //      MERGE (p:Product {productId: $productId})
-  //      MERGE (c)-[:PURCHASED {orderId: $orderId, quantity: $quantity, timestamp: datetime()}]->(p)`,
-  //     { userId, productId: item.productId, orderId: order.orderId, quantity: item.quantity }
-  //   );
-  // }
+  // 4. Write :PURCHASED relationships in Neo4j
+  const session = driver.session();
+  try {
+    for (const item of orderItems) {
+      await session.run(
+        `MERGE (c:Customer {customerId: $userId})
+         MERGE (p:Product {productId: $productId})
+	 SET p.name = $name, p.price = $price
+         MERGE (c)-[:PURCHASED {orderId: $orderId, quantity: $quantity, timestamp: datetime()}]->(p)`,
+        {
+          userId,
+          productId: item.productId,
+          name: item.name,
+          price: item.priceAtPurchase,
+          orderId: order.orderId,
+          quantity: item.quantity,
+        }
+      );
+    }
+  } finally {
+    await session.close();
+  }
 
   // 5. Clear the cart in Redis
   await cartService.clearCart(sessionId);

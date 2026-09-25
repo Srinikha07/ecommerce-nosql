@@ -33,7 +33,7 @@ router.get('/:customerId', async (req, res) => {
         const recommendations = result.records.map(record => ({
             productId: record.get('productId'),
             name: record.get('name'),
-            price: record.get('price').toNumber(),
+            price: typeof record.get('price') === 'object' ? record.get('price').toNumber() : record.get('price'),
             recommendationScore: record.get('recommendationScore').toNumber()
         }));
 
