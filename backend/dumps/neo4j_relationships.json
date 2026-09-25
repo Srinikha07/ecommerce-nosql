@@ -1,0 +1,219 @@
+[
+  {
+    "from": {
+      "labels": [
+        "Customer"
+      ],
+      "properties": {
+        "customerId": "C001",
+        "name": "Arun"
+      }
+    },
+    "type": "PURCHASED",
+    "properties": {},
+    "to": {
+      "labels": [
+        "Product"
+      ],
+      "properties": {
+        "productId": "P001",
+        "price": 2499,
+        "name": "Wireless Headphones"
+      }
+    }
+  },
+  {
+    "from": {
+      "labels": [
+        "Customer"
+      ],
+      "properties": {
+        "customerId": "C001",
+        "name": "Arun"
+      }
+    },
+    "type": "PURCHASED",
+    "properties": {},
+    "to": {
+      "labels": [
+        "Product"
+      ],
+      "properties": {
+        "productId": "P002",
+        "price": 3999,
+        "name": "Smart Watch"
+      }
+    }
+  },
+  {
+    "from": {
+      "labels": [
+        "Customer"
+      ],
+      "properties": {
+        "customerId": "C002",
+        "name": "Priya"
+      }
+    },
+    "type": "PURCHASED",
+    "properties": {},
+    "to": {
+      "labels": [
+        "Product"
+      ],
+      "properties": {
+        "productId": "P001",
+        "price": 2499,
+        "name": "Wireless Headphones"
+      }
+    }
+  },
+  {
+    "from": {
+      "labels": [
+        "Customer"
+      ],
+      "properties": {
+        "customerId": "C002",
+        "name": "Priya"
+      }
+    },
+    "type": "PURCHASED",
+    "properties": {},
+    "to": {
+      "labels": [
+        "Product"
+      ],
+      "properties": {
+        "productId": "P003",
+        "price": 1799,
+        "name": "Bluetooth Speaker"
+      }
+    }
+  },
+  {
+    "from": {
+      "labels": [
+        "Product"
+      ],
+      "properties": {
+        "productId": "P001",
+        "price": 2499,
+        "name": "Wireless Headphones"
+      }
+    },
+    "type": "BELONGS_TO",
+    "properties": {},
+    "to": {
+      "labels": [
+        "Category"
+      ],
+      "properties": {
+        "name": "Electronics"
+      }
+    }
+  },
+  {
+    "from": {
+      "labels": [
+        "Product"
+      ],
+      "properties": {
+        "productId": "P002",
+        "price": 3999,
+        "name": "Smart Watch"
+      }
+    },
+    "type": "BELONGS_TO",
+    "properties": {},
+    "to": {
+      "labels": [
+        "Category"
+      ],
+      "properties": {
+        "name": "Electronics"
+      }
+    }
+  },
+  {
+    "from": {
+      "labels": [
+        "Product"
+      ],
+      "properties": {
+        "productId": "P003",
+        "price": 1799,
+        "name": "Bluetooth Speaker"
+      }
+    },
+    "type": "BELONGS_TO",
+    "properties": {},
+    "to": {
+      "labels": [
+        "Category"
+      ],
+      "properties": {
+        "name": "Electronics"
+      }
+    }
+  },
+  {
+    "from": {
+      "labels": [
+        "Customer"
+      ],
+      "properties": {
+        "customerId": "C999"
+      }
+    },
+    "type": "PURCHASED",
+    "properties": {
+      "quantity": 1,
+      "orderId": "ORD-20260925-2516",
+      "timestamp": {
+        "year": {
+          "low": 2026,
+          "high": 0
+        },
+        "month": {
+          "low": 9,
+          "high": 0
+        },
+        "day": {
+          "low": 25,
+          "high": 0
+        },
+        "hour": {
+          "low": 11,
+          "high": 0
+        },
+        "minute": {
+          "low": 29,
+          "high": 0
+        },
+        "second": {
+          "low": 11,
+          "high": 0
+        },
+        "nanosecond": {
+          "low": 710000000,
+          "high": 0
+        },
+        "timeZoneOffsetSeconds": {
+          "low": 0,
+          "high": 0
+        }
+      }
+    },
+    "to": {
+      "labels": [
+        "Product"
+      ],
+      "properties": {
+        "productId": "P002",
+        "price": 3999,
+        "name": "Smart Watch"
+      }
+    }
+  }
+]
