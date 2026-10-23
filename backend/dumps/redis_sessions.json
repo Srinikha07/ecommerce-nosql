@@ -1,7 +1,12 @@
 {
-  "session:90048dab0c783150c04e0c0bb29440e2": {
+  "session:96d4eee630bfcec6fcd8b332a7300e4d": {
     "isGuest": "true",
-    "createdAt": "2026-09-25T11:27:06.441Z",
-    "lastActive": "2026-09-25T11:27:06.441Z"
+    "createdAt": "2026-10-23T09:13:34.040Z",
+    "lastActive": "2026-10-23T09:13:34.040Z"
+  },
+  "session:3c7c92bdaed5928d301da5102506c1d8": {
+    "isGuest": "true",
+    "createdAt": "2026-10-23T09:09:15.196Z",
+    "lastActive": "2026-10-23T09:09:15.196Z"
   }
 }
