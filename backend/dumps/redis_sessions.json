@@ -1,12 +1,20 @@
 {
-  "session:96d4eee630bfcec6fcd8b332a7300e4d": {
+  "session:9bc871bf95eeeee207c1fe72fca05cf2": {
     "isGuest": "true",
-    "createdAt": "2026-10-23T09:13:34.040Z",
-    "lastActive": "2026-10-23T09:13:34.040Z"
+    "createdAt": "2026-10-23T15:04:42.895Z",
+    "lastActive": "2026-10-23T15:04:42.895Z"
   },
-  "session:3c7c92bdaed5928d301da5102506c1d8": {
+  "session:c33fe4598d9a77cd408f5202401d1e0f": {
     "isGuest": "true",
-    "createdAt": "2026-10-23T09:09:15.196Z",
-    "lastActive": "2026-10-23T09:09:15.196Z"
+    "createdAt": "2026-10-23T14:47:18.256Z",
+    "lastActive": "2026-10-23T14:47:18.256Z"
+  },
+  "session:7b897082a648b8f9a260d00e50a41ea1": {
+    "userId": "ADMIN001",
+    "email": "admin@shopease.demo",
+    "role": "admin",
+    "isGuest": "false",
+    "createdAt": "2026-10-23T14:24:04.820Z",
+    "lastActive": "2026-10-23T14:39:32.022Z"
   }
 }
