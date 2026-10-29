@@ -1,0 +1,48 @@
+[
+  {
+    "_id": "6ab51b166d29ca21a17ae017",
+    "orderId": "ORD-20260924-939f",
+    "userId": "test_user",
+    "items": [
+      {
+        "productId": "P001",
+        "name": "Wireless Headphones",
+        "priceAtPurchase": 2499,
+        "quantity": 1
+      }
+    ],
+    "shippingAddress": {
+      "line1": "123 Test St",
+      "city": "Vellore",
+      "postalCode": "632014",
+      "country": "India"
+    },
+    "total": 2499,
+    "status": "placed",
+    "createdAt": "2026-09-24T12:44:06.900Z",
+    "__v": 0
+  },
+  {
+    "_id": "6ab65b0602f1dce1f7673c3d",
+    "orderId": "ORD-20260925-2516",
+    "userId": "C999",
+    "items": [
+      {
+        "productId": "P002",
+        "name": "Smart Watch",
+        "priceAtPurchase": 3999,
+        "quantity": 1
+      }
+    ],
+    "shippingAddress": {
+      "line1": "123 Test St",
+      "city": "Vellore",
+      "postalCode": "632014",
+      "country": "India"
+    },
+    "total": 3999,
+    "status": "placed",
+    "createdAt": "2026-09-25T11:29:10.953Z",
+    "__v": 0
+  }
+]

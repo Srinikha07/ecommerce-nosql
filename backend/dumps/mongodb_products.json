@@ -1,0 +1,102 @@
+[
+  {
+    "_id": "6a9da7510db009de522ba0a2",
+    "productId": "P009",
+    "name": "Smartphone Stand",
+    "category": "Accessories",
+    "brand": "DeskPro",
+    "price": 699,
+    "stock": 80,
+    "description": "Adjustable smartphone stand"
+  },
+  {
+    "_id": "6a9da7510db009de522ba09d",
+    "productId": "P004",
+    "name": "Gaming Keyboard",
+    "category": "Computer Accessories",
+    "brand": "GameTech",
+    "price": 2999,
+    "stock": 25,
+    "description": "Mechanical gaming keyboard"
+  },
+  {
+    "_id": "6a9da7510db009de522ba09c",
+    "productId": "P003",
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "brand": "SoundMax",
+    "price": 1799,
+    "stock": 40,
+    "description": "Portable Bluetooth speaker"
+  },
+  {
+    "_id": "6a9da7510db009de522ba0a1",
+    "productId": "P008",
+    "name": "Fitness Band",
+    "category": "Wearables",
+    "brand": "FitLife",
+    "price": 1999,
+    "stock": 40,
+    "description": "Fitness band with health tracking"
+  },
+  {
+    "_id": "6a9da7510db009de522ba0a3",
+    "productId": "P010",
+    "name": "Power Bank",
+    "category": "Electronics",
+    "brand": "PowerMax",
+    "price": 1599,
+    "stock": 55,
+    "description": "10000mAh portable power bank"
+  },
+  {
+    "_id": "6a9da7510db009de522ba0a0",
+    "productId": "P007",
+    "name": "USB-C Hub",
+    "category": "Computer Accessories",
+    "brand": "TechPro",
+    "price": 1299,
+    "stock": 45,
+    "description": "Multi-port USB-C connectivity hub"
+  },
+  {
+    "_id": "6a9da7510db009de522ba09b",
+    "productId": "P002",
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "brand": "TechPro",
+    "price": 3999,
+    "stock": 35,
+    "description": "Smart watch with fitness tracking"
+  },
+  {
+    "_id": "6a9da7510db009de522ba09a",
+    "productId": "P001",
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "brand": "SoundMax",
+    "price": 2499,
+    "stock": 50,
+    "description": "Bluetooth wireless headphones"
+  },
+  {
+    "_id": "6a9da7510db009de522ba09e",
+    "productId": "P005",
+    "name": "Wireless Mouse",
+    "category": "Computer Accessories",
+    "brand": "TechPro",
+    "price": 999,
+    "stock": 60,
+    "description": "Ergonomic wireless mouse"
+  },
+  {
+    "_id": "6a9da7510db009de522ba09f",
+    "productId": "P006",
+    "name": "Laptop Backpack",
+    "category": "Bags",
+    "brand": "CarryPro",
+    "price": 1499,
+    "stock": 30,
+    "description": "Water-resistant laptop backpack"
+  }
+]

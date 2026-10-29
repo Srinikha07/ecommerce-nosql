@@ -1,0 +1,146 @@
+[
+  {
+    "labels": [
+      "Customer"
+    ],
+    "properties": {
+      "customerId": "C001",
+      "name": "Arun"
+    }
+  },
+  {
+    "labels": [
+      "Customer"
+    ],
+    "properties": {
+      "customerId": "C002",
+      "name": "Priya"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P001",
+      "price": 2499,
+      "name": "Wireless Headphones"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P002",
+      "price": 3999,
+      "name": "Smart Watch"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P003",
+      "price": 1799,
+      "name": "Bluetooth Speaker"
+    }
+  },
+  {
+    "labels": [
+      "Category"
+    ],
+    "properties": {
+      "name": "Electronics"
+    }
+  },
+  {
+    "labels": [
+      "Customer"
+    ],
+    "properties": {
+      "customerId": "C999"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P002",
+      "price": 3999,
+      "name": "Smart Watch"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P009",
+      "price": 699,
+      "name": "Smartphone Stand"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P004",
+      "price": 2999,
+      "name": "Gaming Keyboard"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P008",
+      "price": 1999,
+      "name": "Fitness Band"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P010",
+      "price": 1599,
+      "name": "Power Bank"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P007",
+      "price": 1299,
+      "name": "USB-C Hub"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P005",
+      "price": 999,
+      "name": "Wireless Mouse"
+    }
+  },
+  {
+    "labels": [
+      "Product"
+    ],
+    "properties": {
+      "productId": "P006",
+      "price": 1499,
+      "name": "Laptop Backpack"
+    }
+  }
+]
